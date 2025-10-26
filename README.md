@@ -1,3 +1,10 @@
+<!-- Top-centered logo -->
+<p align="center">
+  <a href="https://github.com/JornyWan/PRISM-Bench">
+    <img src="assets/prism_logo.png" alt="PRISM-Bench" width="420">
+  </a>
+</p>
+
 # PRISM-Bench
 
 This repository contains the code and data for **PRISM-Bench**, a benchmark designed to evaluate multimodal large language models (MLLMs) on **reasoning with complex visual puzzle**.
