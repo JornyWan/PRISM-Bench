@@ -86,3 +86,7 @@ for details, please read the instructions at evaluation/README.md
 First-Error Detection: whether the model correctly identifies the first incorrect reasoning step.
 
 VQA Evaluation: alignment with ground-truth answers in a multiple-choice setting.
+
+## 📄 License
+
+This project is distributed under the terms of the [LICENSE](./LICENSE).
