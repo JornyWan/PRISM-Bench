@@ -8,12 +8,8 @@
 # PRISM-Bench
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2510.23594">
-    <img src="https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge" alt="Paper">
-  </a>
-  <a href="https://jornywan.github.io/PRISM-Bench-web/">
-    <img src="https://img.shields.io/badge/🌐_Website-Project_Page-4285F4?style=for-the-badge" alt="Website">
-  </a>
+  <a href="https://arxiv.org/abs/2510.23594"><strong>📄 Paper</strong></a> •
+  <a href="https://jornywan.github.io/PRISM-Bench-web/"><strong>🌐 Website</strong></a>
 </p>
 
 This repository contains the code and data for **PRISM-Bench**, a benchmark designed to evaluate multimodal large language models (MLLMs) on **reasoning with complex visual puzzle**.
