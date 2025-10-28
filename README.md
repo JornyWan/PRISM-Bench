@@ -7,13 +7,12 @@
 
 # PRISM-Bench
 
-<!-- Badges -->
 <p align="center">
   <a href="https://arxiv.org/abs/2510.23594">
-    <img src="https://img.shields.io/badge/arXiv-2510.23594-b31b1b.svg" alt="Paper">
+    <img src="https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge" alt="Paper">
   </a>
   <a href="https://jornywan.github.io/PRISM-Bench-web/">
-    <img src="https://img.shields.io/badge/Website-PRISM--Bench-blue.svg" alt="Website">
+    <img src="https://img.shields.io/badge/🌐_Website-Project_Page-4285F4?style=for-the-badge" alt="Website">
   </a>
 </p>
 
