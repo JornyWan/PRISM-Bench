@@ -13,17 +13,25 @@ A subset of first-error-detection track is under active repair. **We will releas
 
 ---
 
-We’d like to respond to some of the questions about PRISM-Bench.
+# **Clarification and Updates regarding PRISM-Bench**
 
-First, thank you again to everyone who has taken the time to read the paper and look closely at the benchmark. Regarding the points that were raised:
+We appreciate the community's feedback and the scrutiny that helps improve benchmarks. We would like to address recent questions regarding data quality and the codebase:
 
-1. For data quality, we did manually inspect the injected errors themselves (since that is the more challenging part of the task), but we did not carefully audit the step-by-step CoT that was produced when we converted the ground-truth solution into a multi-step reasoning trace using GPT. In that conversion stage, GPT hallucinated in some cases, which led to incorrect step labels. Because this looked like a “simple” text-only transformation step, we did not scrutinize GPT’s outputs as closely as we should have. That is our mistake. We are now systematically checking the generated CoTs, fixing the issues, and will re-release the benchmark once the corrections are complete.
+**1. Regarding the Inference Code Bug**
+There has been a misunderstanding regarding a bug in our repository. The issue involving incorrect image loading was isolated to the `example_inference.py` demonstration script provided for community reference. Each MLLM has its own way to load input data; we only provide one example script for the purpose of showing how to load and use our benchmark.
 
-2. Regarding the inference code, the original example_inference script used a dummy image input for the GPT model example. In the appendix of the paper we did show GPT outputs where the model clearly had access to the image, and we later fixed the dummy code after it was pointed out in an issue. We also apologize for having closed that issue too quickly earlier; we reopened it and responded to the new concerns, and in the future we will keep issues open until all questions are fully resolved.
+&nbsp;&nbsp;&nbsp;&nbsp;**1.1 Paper Integrity:** All experiments and results reported in the paper were conducted using our internal evaluation pipeline, which correctly loads and processes all visual data.
 
-3. On criticism and community discussion, we genuinely appreciate critical feedback and corrections, and we hope discussions can stay friendly and constructive. Our goal and the purpose of this benchmark are to help push forward research on multimodal reasoning. There were oversights in our data pipeline that should not have happened, but each of us is working on this project in our spare time out of genuine interest in the topic, and we’ve invested a lot of time and effort to move this small direction forward.
+&nbsp;&nbsp;&nbsp;&nbsp;**1.2 Evidence:** As demonstrated in the paper’s appendix, the models successfully interpret and describe visual content, which confirms they had full access to the images.
 
-We’ll take this experience seriously, learn from it, and do better going forward.
+&nbsp;&nbsp;&nbsp;&nbsp;**1.3 Status:** The demo script has been fixed to correctly reflect the intended usage.
+     
+**2. Regarding Data Quality & CoT Traces** We acknowledge an oversight in our data pipeline. While we manually inspected the injected errors, we relied on GPT-4 to convert ground-truth solutions into step-by-step Chain-of-Thought (CoT) traces. We underestimated the hallucination rate during this transformation and did not audit the CoT steps as rigorously as required.
+
+&nbsp;&nbsp;&nbsp;&nbsp;**2.1 Action Plan:** We are currently conducting a systematic manual review of all CoT traces to correct these labeling errors.
+     
+**3. Community Engagement** We would also like to address the interaction on GitHub. While our initial response provided detailed technical context, we acknowledge that closing the issue prematurely marked it as 'resolved' too soon.
+However, it is important to clarify the timeline: **We actually reopened the issue and provided a second, even more detailed response three weeks ago (well before the recent social media discussions)** immediately after the user requested it. We have kept the issue open since then to ensure all follow-up questions are thoroughly resolved. We value constructive feedback and remain committed to an open dialogue.
 
 ## 🚀 Features
 
