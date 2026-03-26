@@ -7,32 +7,13 @@
 
 # PRISM-Bench
 
-This repository contains the code and data for **PRISM-Bench**, a benchmark designed to evaluate multimodal large language models (MLLMs) on **reasoning with complex visual puzzle**.
+This repository contains the code and data for **PRISM-Bench**, a benchmark designed to evaluate multimodal large language models (MLLMs) on **reasoning with complex visual puzzles**.
 
-A subset of first-error-detection track is under active repair. **We will release our data again after fixed!**
+> **🎉 Update (March 2026): PRISM-Bench Data Fully Rereleased!** > Following a rigorous manual review and multiple rounds of auditing, we have resolved the previous data pipeline and CoT hallucination issues. The entire benchmark has been updated and is now fully available. We deeply appreciate the community's feedback, which has been instrumental in making PRISM-Bench more robust.  
+> 
+> *For full transparency regarding our recent data quality improvements and bug fixes, please see our [Detailed Release Notes & Incident Archive](./Release_Notes_v2.md).*
 
 ---
-
-# **Clarification and Updates regarding PRISM-Bench**
-
-We appreciate the community's feedback and the scrutiny that helps improve benchmarks. We would like to address recent questions regarding data quality and the codebase:
-
-**1. Regarding the Inference Code Bug**
-There has been a misunderstanding regarding a bug in our repository. The issue involving incorrect image loading was isolated to the `example_inference.py` demonstration script provided for community reference. Each MLLM has its own way to load input data; we only provide one example script for the purpose of showing how to load and use our benchmark.
-
-&nbsp;&nbsp;&nbsp;&nbsp;**1.1 Paper Integrity:** All experiments and results reported in the paper were conducted using our internal evaluation pipeline, which correctly loads and processes all visual data.
-
-&nbsp;&nbsp;&nbsp;&nbsp;**1.2 Evidence:** As demonstrated in the paper’s appendix, the models successfully interpret and describe visual content, which confirms they had full access to the images.
-
-&nbsp;&nbsp;&nbsp;&nbsp;**1.3 Status:** The demo script has been fixed to correctly reflect the intended usage.
-     
-**2. Regarding Data Quality & CoT Traces** We acknowledge an oversight in our data pipeline. While we manually inspected the injected errors, we relied on GPT-4 to convert ground-truth solutions into step-by-step Chain-of-Thought (CoT) traces. We underestimated the hallucination rate during this transformation and did not audit the CoT steps as rigorously as required.
-
-&nbsp;&nbsp;&nbsp;&nbsp;**2.1 Action Plan:** We are currently conducting a systematic manual review of all CoT traces to correct these labeling errors.
-     
-**3. Community Engagement** We would also like to address the interaction on GitHub. While our initial response provided detailed technical context, we acknowledge that closing the issue prematurely marked it as 'resolved' too soon.
-However, it is important to clarify the timeline: **We actually reopened the issue and provided a second, even more detailed response three weeks ago (well before the recent social media discussions)** immediately after the user requested it. We have kept the issue open since then to ensure all follow-up questions are thoroughly resolved. We value constructive feedback and remain committed to an open dialogue.
-
 ## 🚀 Features
 
 - **Diverse Visual Reasoning Tasks**: puzzles, graph-based reasoning, pattern recognition, algorithmic reasoning, etc.  
